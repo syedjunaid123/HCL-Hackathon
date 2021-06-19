@@ -21,7 +21,7 @@ public class HomeUserScreen extends GetLocators {
     public HomeUserScreen() throws IOException {
     }
 
-    public boolean verify_ProgressBar(AppiumDriver<MobileElement> driver, String param ){
+    public boolean verify_ProgressBar(String param ){
         try{
         wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(props.getProperty(param))));
         return false;

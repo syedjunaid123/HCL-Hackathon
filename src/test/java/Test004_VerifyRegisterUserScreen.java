@@ -1,22 +1,12 @@
 import MobileAutomation.Configuration.SetupDriver.SetupLaunch;
-import MobileAutomation.Configuration.SetupDriver.setupDriverInit;
 import MobileAutomation.Screens.HomeScreen;
 import MobileAutomation.Screens.RegisterUserScreen;
-import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.android.nativekey.KeyEvent;
 import org.testng.annotations.Test;
-
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.android.nativekey.AndroidKey;
-
 
 import java.io.IOException;
 
 
 public class Test004_VerifyRegisterUserScreen extends SetupLaunch{
-
-    AppiumDriver driver = setupDriverInit.getDriver();
-
 
     @Test
     public void test004_verifyRegisterUserScreen() throws IOException {

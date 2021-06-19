@@ -1,15 +1,11 @@
 import MobileAutomation.Configuration.SetupDriver.SetupLaunch;
-import MobileAutomation.Configuration.SetupDriver.setupDriverInit;
 import MobileAutomation.Screens.HomeScreen;
-import io.appium.java_client.AppiumDriver;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
 
 
 public class Test002_ValidatingHomeScreenDisplayedAfterSelecting_EN_andDenied extends SetupLaunch{
-
-    AppiumDriver driver = setupDriverInit.getDriver();
 
     @Test
     public void test002_validatingHomeScreenDisplayedAfterSelecting_EN_andDenied() throws IOException {

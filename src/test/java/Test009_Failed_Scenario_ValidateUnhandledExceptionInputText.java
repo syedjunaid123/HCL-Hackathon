@@ -9,15 +9,17 @@ import java.io.IOException;
 
 public class Test009_Failed_Scenario_ValidateUnhandledExceptionInputText extends SetupLaunch{
 
-    AppiumDriver driver = setupDriverInit.getDriver();
-
     @Test
     public void test009_failedScenarioValidateUnhandledExceptionButton() throws IOException {
 
+        LOGGER.info("Step1: Application is Launched");
         SetupLaunch.setupApplication();
 
+        LOGGER.info("Step2: Enter Exception in Input Field");
         HomeScreen home = new HomeScreen();
         home.input_Element("ExceptionInput_Txt", "InputExceptionText");
+
+        LOGGER.info("Step3: Verify HomeScreen Title");
         home.verify_Element("TitleHomeScreen");
     }
 }
