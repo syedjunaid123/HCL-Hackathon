@@ -10,10 +10,6 @@ import org.testng.asserts.SoftAssert;
 import java.net.MalformedURLException;
 import java.util.logging.Logger;
 
-/**
- * Author
- * Vani Goyal, 2020
- */
 
 public class setupDriverInit {
     public static AppiumDriver driver;
