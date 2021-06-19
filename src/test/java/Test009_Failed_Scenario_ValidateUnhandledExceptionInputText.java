@@ -17,7 +17,7 @@ public class Test009_Failed_Scenario_ValidateUnhandledExceptionInputText extends
         SetupLaunch.setupApplication();
 
         HomeScreen home = new HomeScreen();
-        home.input_Element(driver, "ExceptionInput_Txt", "InputExceptionText");
+        home.input_Element("ExceptionInput_Txt", "InputExceptionText");
         home.verify_Element("TitleHomeScreen");
     }
 }

@@ -4,7 +4,6 @@ import MobileAutomation.Configuration.SetupDriver.setupDriverInit;
 import MobileAutomation.ObjectRepository.GetLocators;
 import MobileAutomation.DataRepository.GetTestData;
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
@@ -42,20 +41,19 @@ public class HomeScreen extends GetLocators {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(props.getProperty(param)))).click();
     }
 
-    public AppiumDriver<MobileElement> getText_Element(AppiumDriver<MobileElement> driver, String param ) {
+    public void getText_Element(String param) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(props.getProperty(param)))).getText();
-        return  driver;
+        return;
     }
 
-    public AppiumDriver<MobileElement> input_Element(AppiumDriver<MobileElement> driver, String param, String data) throws IOException {
+    public void input_Element(String param, String data) throws IOException {
         dataProps.gettingTestData();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(props.getProperty(param)))).sendKeys(dataProps.gettingTestData(data));
-        return  driver;
     }
 
-    public AppiumDriver<MobileElement> verifyText_Element(AppiumDriver<MobileElement> driver, String param, String textToCompare) {
+    public Boolean verifyText_Element(String param, String textToCompare) {
         wait.until(ExpectedConditions.textToBePresentInElementLocated(By.xpath(props.getProperty(param)), textToCompare));
-        return  driver;
+        return  true;
     }
 
     public void scrollToBottom() {

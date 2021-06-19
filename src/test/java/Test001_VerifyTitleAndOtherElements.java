@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class Test001_VerifyTitleAndOtherElements extends SetupLaunch{
 
-    AppiumDriver driver = setupDriverInit.getDriver();
+//    AppiumDriver driver = setupDriverInit.getDriver();
 
     @Test
     public void test001_verifyScreenTitleAndOtherElements() throws IOException {
