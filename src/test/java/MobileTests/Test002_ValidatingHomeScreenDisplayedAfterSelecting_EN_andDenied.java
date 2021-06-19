@@ -1,3 +1,5 @@
+package MobileTests;
+
 import MobileAutomation.Configuration.SetupDriver.SetupLaunch;
 import MobileAutomation.Screens.HomeScreen;
 import org.testng.annotations.Test;

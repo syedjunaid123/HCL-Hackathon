@@ -1,3 +1,5 @@
+package MobileTests;
+
 import MobileAutomation.Configuration.SetupDriver.SetupLaunch;
 import MobileAutomation.Configuration.SetupDriver.setupDriverInit;
 import MobileAutomation.Screens.HomeScreen;
@@ -7,19 +9,19 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 
 
-public class Test009_Failed_Scenario_ValidateUnhandledExceptionInputText extends SetupLaunch{
+public class Test008_Failed_Scenario_ValidateUnhandledExceptionButton extends SetupLaunch{
 
     @Test
-    public void test009_failedScenarioValidateUnhandledExceptionButton() throws IOException {
+    public void test008_failedScenarioValidateUnhandledExceptionButton() throws IOException {
 
         LOGGER.info("Step1: Application is Launched");
         SetupLaunch.setupApplication();
 
-        LOGGER.info("Step2: Enter Exception in Input Field");
+        LOGGER.info("Step2: Click on Exception Button");
         HomeScreen home = new HomeScreen();
-        home.input_Element("ExceptionInput_Txt", "InputExceptionText");
+        home.click_Element("ExceptionTest_Btn");
 
-        LOGGER.info("Step3: Verify HomeScreen Title");
+        LOGGER.info("Step3: Application is Launched");
         home.verify_Element("TitleHomeScreen");
     }
 }
