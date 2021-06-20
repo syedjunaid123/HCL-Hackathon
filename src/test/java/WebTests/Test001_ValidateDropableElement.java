@@ -1,6 +1,6 @@
 package WebTests;
 
-import WebAutomation.Configurations.SetUpDriver.SetUpDriver;
+import WebAutomation.Configurations.SetUpDriver;
 import WebAutomation.Pages.BaseMethods;
 import WebAutomation.Pages.DroppablePage;
 import org.testng.Assert;

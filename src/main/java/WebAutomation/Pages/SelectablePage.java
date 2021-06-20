@@ -1,5 +1,5 @@
 package WebAutomation.Pages;
-import WebAutomation.Configurations.SetUpDriver.SetUpDriver;
+import WebAutomation.Configurations.SetUpDriver;
 import WebAutomation.ObjectRepository.GetLocators;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;

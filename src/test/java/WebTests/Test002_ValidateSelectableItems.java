@@ -1,10 +1,9 @@
 package WebTests;
 
-import WebAutomation.Configurations.SetUpDriver.SetUpDriver;
+import WebAutomation.Configurations.SetUpDriver;
 import WebAutomation.Pages.BaseMethods;
 import WebAutomation.Pages.DroppablePage;
 import WebAutomation.Pages.SelectablePage;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
