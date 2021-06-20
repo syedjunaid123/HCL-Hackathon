@@ -28,10 +28,5 @@ public class Test002_ValidateSelectableItems extends SetUpDriver {
         LOGGER.info("Step4: Select Drop 1,3,7");
         SelectablePage select = new SelectablePage();
         select.selectItems();
-
-        LOGGER.info("Step5: Select Drop 1");
-
-
-
-        }
     }
+}

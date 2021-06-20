@@ -10,16 +10,12 @@ import io.appium.java_client.touch.offset.PointOption;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
-
-
-
 
 public class HomeScreen extends GetLocators {
 
@@ -31,7 +27,6 @@ public class HomeScreen extends GetLocators {
     public HomeScreen() throws IOException {
     }
 
-
     public boolean verify_Element(String param ) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(props.getProperty(param)))).isDisplayed();
         return true;
@@ -39,6 +34,14 @@ public class HomeScreen extends GetLocators {
 
     public void click_Element(String param) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(props.getProperty(param)))).click();
+    }
+
+    public void click_Element1(String locator, String by) {
+
+        switch(by){
+            case "id":
+                wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(props.getProperty(locator)))).click();
+        }
     }
 
     public void getText_Element(String param) {

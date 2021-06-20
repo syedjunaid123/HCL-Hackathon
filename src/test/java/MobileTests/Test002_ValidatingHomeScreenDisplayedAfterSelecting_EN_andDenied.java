@@ -22,7 +22,7 @@ public class Test002_ValidatingHomeScreenDisplayedAfterSelecting_EN_andDenied ex
         LOGGER.info("Step3: Click on 'No,No' Button");
         home.click_Element("EN_Deny_Btn");
 
-        LOGGER.info("Step3: Validate if the flow is navigated back to HomeScreen");
+        LOGGER.info("Step4: Validate if the flow is navigated back to HomeScreen");
         softAssert.assertTrue(home.verify_Element("HomeScreen"), "Flow HomeScreen is not redirected to HomeScreen");
 
     }
