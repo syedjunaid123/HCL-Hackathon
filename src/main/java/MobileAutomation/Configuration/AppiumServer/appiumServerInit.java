@@ -2,9 +2,9 @@ package MobileAutomation.Configuration.AppiumServer;
 
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
-
 import java.io.File;
 import java.util.logging.Logger;
+
 
 
 /**

@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import java.util.HashMap;
 
 
-public class TC001_Testone extends BaseMethods {
+public class TC00_API_TestCases extends BaseMethods {
     public HashMap<String, String> setQueryParams() throws JSONException {
         return new HashMap<String, String>() {
             {
