@@ -1,7 +1,7 @@
 package MobileTests;
 
 import MobileAutomation.Configuration.SetupDriver.SetupLaunch;
-import MobileAutomation.Screens.HomeScreen;
+import MobileAutomation.Screens.BaseMethod;
 import WebAutomation.Configurations.SetUpDriver;
 import com.aventstack.extentreports.ExtentTest;
 import org.testng.annotations.Test;
@@ -19,40 +19,40 @@ public class Test003_Mobile_ValidateWebViewInteraction extends SetupLaunch {
         SetupLaunch.setupApplication();
 
         Step.info("Step2: Click Web View Button");
-        HomeScreen home = new HomeScreen();
-        home.click_Element("WebView_Btn");
+        BaseMethod base = new BaseMethod();
+        base.click_Element("WebView_Btn");
 
         Step.info("Step3: Validate if the Webview title is displayed");
-        softAssert.assertTrue(home.verify_Element("WebViewTitle"), "WebView Title is not displayed");
+        softAssert.assertTrue(base.verify_Element("WebViewTitle"), "WebView Title is not displayed");
 
         Step.info("Step4: Enter Your Name in TextBox");
-        String nameEntered = home.input_Element("EnterName_Txt", "Name");
+        String nameEntered = base.input_Element("EnterName_Txt", "Name");
 
         Step.info("Step5: Click to open the dropdown");
-        home.click_Element("SelectDropdown");
+        base.click_Element("SelectDropdown");
 
         Step.info("Step6: Select option mercedes from the dropdown");
-        home.click_Element("mercedesOption_Btn");
+        base.click_Element("mercedesOption_Btn");
 
         Step.info("Step7: Verify option selected from mercedes from the dropdown");
-        String selectedDropdown = home.getText_Element("SelectDropdown");
+        String selectedDropdown = base.getText_Element("SelectDropdown");
 
         Step.info("Step8: Click on Button 'Send me your name!'");
-        home.click_Element("sendName_Btn");
+        base.click_Element("sendName_Btn");
 
         Step.info("Step9: Verify if 'This is my way Text..' is displayed ");
-        softAssert.assertTrue(home.verify_Element("ThisIsMyWay_Txt"), "'This is my way Text..' is not displayed");
+        softAssert.assertTrue(base.verify_Element("ThisIsMyWay_Txt"), "'This is my way Text..' is not displayed");
 
         Step.info("Step10: Verify Name entered from Previous screen");
-        softAssert.assertEquals(home.getText_Element("verifyNameEntered_Lbl"), nameEntered);
+        softAssert.assertEquals(base.getText_Element("verifyNameEntered_Lbl"), nameEntered);
 
         Step.info("Step11: Verify Car entered from Previous screen");
-        softAssert.assertEquals(home.getText_Element("verifyCarSelected_Lbl"), selectedDropdown);
+        softAssert.assertEquals(base.getText_Element("verifyCarSelected_Lbl"), selectedDropdown);
 
         Step.info("Step12: Click on Link ");
-        home.click_Element("clickHere_Link");
+        base.click_Element("clickHere_Link");
 
         Step.info("Step13: Verify Car Volvo is selected back again");
-        softAssert.assertEquals(home.getText_Element("SelectDropdown"), "Volvo");
+        softAssert.assertEquals(base.getText_Element("SelectDropdown"), "Volvo");
     }
 }

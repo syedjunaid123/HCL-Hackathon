@@ -17,14 +17,14 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.android.nativekey.KeyEvent;
 
-public class HomeScreen extends GetLocators {
+public class BaseMethod extends GetLocators {
 
     AppiumDriver driver = setupDriverInit.getDriver();
     WebDriverWait wait = new WebDriverWait(driver, 60);
     GetTestData dataProps = new GetTestData();
     Properties props = this.gettingLocator();
 
-    public HomeScreen() throws IOException {
+    public BaseMethod() throws IOException {
     }
 
     public boolean verify_Element(String param ) {

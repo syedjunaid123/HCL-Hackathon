@@ -1,7 +1,7 @@
 package MobileTests;
 
 import MobileAutomation.Configuration.SetupDriver.SetupLaunch;
-import MobileAutomation.Screens.HomeScreen;
+import MobileAutomation.Screens.BaseMethod;
 import WebAutomation.Configurations.SetUpDriver;
 import com.aventstack.extentreports.ExtentTest;
 import org.testng.annotations.Test;
@@ -20,10 +20,10 @@ public class Test007_Mobile_ValidatingPopUpTapAndDismiss extends SetupLaunch{
         SetupLaunch.setupApplication();
 
         Step.info("Step2: Click on Display Pop Up Button");
-        HomeScreen home = new HomeScreen();
-        home.click_Element("DispPopupWindow_Btn");
+        BaseMethod base = new BaseMethod();
+        base.click_Element("DispPopupWindow_Btn");
 
         Step.info("Step3: Click Dismiss Button");
-        home.verify_Element("PopUpDismiss_Btn");
+        base.verify_Element("PopUpDismiss_Btn");
     }
 }

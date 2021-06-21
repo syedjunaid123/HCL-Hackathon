@@ -1,7 +1,7 @@
 package MobileTests;
 
 import MobileAutomation.Configuration.SetupDriver.SetupLaunch;
-import MobileAutomation.Screens.HomeScreen;
+import MobileAutomation.Screens.BaseMethod;
 import WebAutomation.Configurations.SetUpDriver;
 import com.aventstack.extentreports.ExtentTest;
 import org.testng.annotations.Test;
@@ -19,10 +19,10 @@ public class Test009_Mobile_Failed_Scenario_ValidateUnhandledExceptionInputText 
         SetupLaunch.setupApplication();
 
         Step.info("Step2: Enter Exception in Input Field");
-        HomeScreen home = new HomeScreen();
-        home.input_Element("ExceptionInput_Txt", "InputExceptionText");
+        BaseMethod base = new BaseMethod();
+        base.input_Element("ExceptionInput_Txt", "InputExceptionText");
 
         Step.info("Step3: Verify HomeScreen Title");
-        home.verify_Element("TitleHomeScreen");
+        base.verify_Element("TitleHomeScreen");
     }
 }

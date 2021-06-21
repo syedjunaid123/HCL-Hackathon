@@ -1,7 +1,7 @@
 package MobileTests;
 
 import MobileAutomation.Configuration.SetupDriver.SetupLaunch;
-import MobileAutomation.Screens.HomeScreen;
+import MobileAutomation.Screens.BaseMethod;
 import WebAutomation.Configurations.SetUpDriver;
 import com.aventstack.extentreports.ExtentTest;
 import org.testng.annotations.Test;
@@ -19,10 +19,10 @@ public class Test008_Mobile_Failed_Scenario_ValidateUnhandledExceptionButton ext
         SetupLaunch.setupApplication();
 
         Step.info("Step2: Click on Exception Button");
-        HomeScreen home = new HomeScreen();
-        home.click_Element("ExceptionTest_Btn");
+        BaseMethod base = new BaseMethod();
+        base.click_Element("ExceptionTest_Btn");
 
         Step.info("Step3: Application is Launched");
-        home.verify_Element("TitleHomeScreen");
+        base.verify_Element("TitleHomeScreen");
     }
 }

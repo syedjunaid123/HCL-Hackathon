@@ -1,14 +1,14 @@
 package MobileTests;
 
 import MobileAutomation.Configuration.SetupDriver.SetupLaunch;
-import MobileAutomation.Screens.HomeScreen;
+import MobileAutomation.Screens.BaseMethod;
 import WebAutomation.Configurations.SetUpDriver;
 import com.aventstack.extentreports.ExtentTest;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-public class Test002_Mobile_ValidatingHomeScreenDisplayedAfterSelecting_EN_andDenied extends SetupLaunch {
+public class Test002_Mobile_ValidatingBaseMethodDisplayedAfterSelecting_EN_andDenied extends SetupLaunch {
     String TestName = this.getClass().getSimpleName();
 
     @Test
@@ -19,13 +19,13 @@ public class Test002_Mobile_ValidatingHomeScreenDisplayedAfterSelecting_EN_andDe
         SetupLaunch.setupApplication();
 
         Step.info("Step2: Click on EN-Button");
-        HomeScreen home = new HomeScreen();
-        home.click_Element("EN_Btn");
+        BaseMethod base = new BaseMethod();
+        base.click_Element("EN_Btn");
 
         Step.info("Step3: Click on 'No,No' Button");
-        home.click_Element("EN_Deny_Btn");
+        base.click_Element("EN_Deny_Btn");
 
         Step.info("Step4: Validate if the flow is navigated back to HomeScreen");
-        softAssert.assertTrue(home.verify_Element("HomeScreen"), "Flow HomeScreen is not redirected to HomeScreen");
+        softAssert.assertTrue(base.verify_Element("HomeScreen"), "Flow HomeScreen is not redirected to HomeScreen");
     }
 }

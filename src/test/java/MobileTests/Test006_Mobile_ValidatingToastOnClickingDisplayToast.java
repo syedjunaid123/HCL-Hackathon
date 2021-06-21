@@ -1,7 +1,7 @@
 package MobileTests;
 
 import MobileAutomation.Configuration.SetupDriver.SetupLaunch;
-import MobileAutomation.Screens.HomeScreen;
+import MobileAutomation.Screens.BaseMethod;
 import WebAutomation.Configurations.SetUpDriver;
 import com.aventstack.extentreports.ExtentTest;
 import org.testng.Assert;
@@ -19,10 +19,10 @@ public class Test006_Mobile_ValidatingToastOnClickingDisplayToast extends SetupL
         SetupLaunch.setupApplication();
 
         Step.info("Step2: Click on Display Toast Button");
-        HomeScreen home = new HomeScreen();
-        home.click_Element("DispToast_Btn");
+        BaseMethod base = new BaseMethod();
+        base.click_Element("DispToast_Btn");
 
         Step.info("Step3: Validate the Toast Button");
-        Assert.assertTrue(home.verify_Element("Display_Toast"), "Toast Message is not displayed");
+        Assert.assertTrue(base.verify_Element("Display_Toast"), "Toast Message is not displayed");
     }
 }
