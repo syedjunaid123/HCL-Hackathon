@@ -25,8 +25,7 @@ public class Test005_VerifyProgressBarLoader extends SetupLaunch{
         HomeUserScreen home_screen = new HomeUserScreen();
         home_screen.verify_ProgressBar("ShowProgressBar_PopUp");
 
-        LOGGER.info("Step4: Valiidate if the flow is navigated to Register Screen and Title is displayed");
+        LOGGER.info("Step4: Validate if the flow is navigated to Register Screen and Title is displayed");
         Assert.assertTrue(home.verify_Element("RegisterScreenTitle"), "RegisterScreen Title is not displayed");
-
     }
 }

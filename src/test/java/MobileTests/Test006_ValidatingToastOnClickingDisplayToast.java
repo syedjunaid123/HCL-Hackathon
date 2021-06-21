@@ -6,8 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import java.io.IOException;
 
-
-public class Test006_ValidatingToastOnClickingDisplayToast extends SetupLaunch{
+public class Test006_ValidatingToastOnClickingDisplayToast extends SetupLaunch {
 
     @Test
     public void test006_validatingToastOnClickingDisplayToast() throws IOException {

@@ -44,14 +44,15 @@ public class HomeScreen extends GetLocators {
         }
     }
 
-    public void getText_Element(String param) {
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(props.getProperty(param)))).getText();
-        return;
+    public String getText_Element(String param) {
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(props.getProperty(param)))).getText();
     }
 
-    public void input_Element(String param, String data) throws IOException {
+    public String input_Element(String param, String data) throws IOException {
         dataProps.gettingTestData();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(props.getProperty(param)))).clear();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(props.getProperty(param)))).sendKeys(dataProps.gettingTestData(data));
+        return data;
     }
 
     public Boolean verifyText_Element(String param, String textToCompare) {
@@ -70,6 +71,8 @@ public class HomeScreen extends GetLocators {
         dragNDrop.perform();
 
     }
+
+
 
     public void pressBackButton(){
         ((AndroidDriver) driver).pressKey(new KeyEvent(AndroidKey.BACK));
