@@ -3,19 +3,17 @@ package WebTests;
 import WebAutomation.Configurations.SetUpDriver;
 import WebAutomation.Pages.BaseMethods;
 import WebAutomation.Pages.DroppablePage;
-import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.Status;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-public class Test001_ValidateDropableElement extends SetUpDriver {
+public class Test001_Web_ValidateDroppableElement extends SetUpDriver {
     String TestName = this.getClass().getSimpleName();
 
     @Test
-    public void test001_validateDropableElement() throws IOException {
+    public void test001_validateDroppableElement() throws IOException {
 
         ExtentTest Step = SetUpDriver.report(TestName);
 
@@ -35,5 +33,5 @@ public class Test001_ValidateDropableElement extends SetUpDriver {
 
         Step.info("Step5: Validate if the droppable Component is Highlighted");
         Assert.assertTrue(baseMethod.verify_Element("dropableColorHighlight"), "Drag and Drop Didn't Happen");
-        }
     }
+}

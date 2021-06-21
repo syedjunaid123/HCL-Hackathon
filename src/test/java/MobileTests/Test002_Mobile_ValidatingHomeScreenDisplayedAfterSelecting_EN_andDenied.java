@@ -8,13 +8,13 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-
-public class Test002_ValidatingHomeScreenDisplayedAfterSelecting_EN_andDenied extends SetupLaunch{
+public class Test002_Mobile_ValidatingHomeScreenDisplayedAfterSelecting_EN_andDenied extends SetupLaunch {
     String TestName = this.getClass().getSimpleName();
+
     @Test
     public void test002_validatingHomeScreenDisplayedAfterSelecting_EN_andDenied() throws IOException {
         ExtentTest Step = SetUpDriver.report(TestName);
-        
+
         Step.info("Step1: Application is Launched");
         SetupLaunch.setupApplication();
 
@@ -27,6 +27,5 @@ public class Test002_ValidatingHomeScreenDisplayedAfterSelecting_EN_andDenied ex
 
         Step.info("Step4: Validate if the flow is navigated back to HomeScreen");
         softAssert.assertTrue(home.verify_Element("HomeScreen"), "Flow HomeScreen is not redirected to HomeScreen");
-
     }
 }

@@ -10,14 +10,13 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-
-public class Test005_VerifyProgressBarLoader extends SetupLaunch{
+public class Test005_Mobile_VerifyProgressBarLoader extends SetupLaunch {
     String TestName = this.getClass().getSimpleName();
 
     @Test
     public void test005_verifyProgressBarLoader() throws IOException {
         ExtentTest Step = SetUpDriver.report(TestName);
-        
+
         Step.info("Step1: Application is Launched");
         SetupLaunch.setupApplication();
 

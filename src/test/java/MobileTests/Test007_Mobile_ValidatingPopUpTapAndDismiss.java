@@ -4,25 +4,26 @@ import MobileAutomation.Configuration.SetupDriver.SetupLaunch;
 import MobileAutomation.Screens.HomeScreen;
 import WebAutomation.Configurations.SetUpDriver;
 import com.aventstack.extentreports.ExtentTest;
-import org.testng.Assert;
 import org.testng.annotations.Test;
+
 import java.io.IOException;
 
-public class Test006_ValidatingToastOnClickingDisplayToast extends SetupLaunch {
+
+public class Test007_Mobile_ValidatingPopUpTapAndDismiss extends SetupLaunch{
     String TestName = this.getClass().getSimpleName();
 
     @Test
-    public void test006_validatingToastOnClickingDisplayToast() throws IOException {
+    public void test007_validatingPopUpTapAndDismiss() throws IOException {
         ExtentTest Step = SetUpDriver.report(TestName);
-        
+
         Step.info("Step1: Application is Launched");
         SetupLaunch.setupApplication();
 
-        Step.info("Step2: Click on Display Toast Button");
+        Step.info("Step2: Click on Display Pop Up Button");
         HomeScreen home = new HomeScreen();
-        home.click_Element("DispToast_Btn");
+        home.click_Element("DispPopupWindow_Btn");
 
-        Step.info("Step3: Validate the Toast Button");
-        Assert.assertTrue(home.verify_Element("Display_Toast"), "Toast Message is not displayed");
+        Step.info("Step3: Click Dismiss Button");
+        home.verify_Element("PopUpDismiss_Btn");
     }
 }

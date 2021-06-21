@@ -10,13 +10,13 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 
 
-public class Test004_VerifyRegisterUserScreen extends SetupLaunch{
+public class Test004_Mobile_VerifyRegisterUserScreen extends SetupLaunch {
     String TestName = this.getClass().getSimpleName();
 
     @Test
     public void test004_verifyRegisterUserScreen() throws IOException {
         ExtentTest Step = SetUpDriver.report(TestName);
-        
+
         Step.info("Step1: Application is Launched");
         SetupLaunch.setupApplication();
 
@@ -108,6 +108,5 @@ public class Test004_VerifyRegisterUserScreen extends SetupLaunch{
 
         Step.info("Step30: Validate if the flow is navigated back to HomeScreen");
         softAssert.assertTrue(home.verify_Element("HomeScreen"), "Flow is not navigated back to HomeScreen");
-
     }
 }

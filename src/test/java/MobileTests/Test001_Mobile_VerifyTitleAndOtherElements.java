@@ -8,9 +8,9 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-
-public class Test001_VerifyTitleAndOtherElements extends SetupLaunch{
+public class Test001_Mobile_VerifyTitleAndOtherElements extends SetupLaunch {
     String TestName = this.getClass().getSimpleName();
+
     @Test
     public void test001_verifyScreenTitleAndOtherElements() throws IOException {
         ExtentTest Step = SetUpDriver.report(TestName);

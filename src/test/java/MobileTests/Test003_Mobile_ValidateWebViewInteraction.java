@@ -5,16 +5,16 @@ import MobileAutomation.Screens.HomeScreen;
 import WebAutomation.Configurations.SetUpDriver;
 import com.aventstack.extentreports.ExtentTest;
 import org.testng.annotations.Test;
+
 import java.io.IOException;
 
-
-public class Test003_ValidateWebViewInteraction extends SetupLaunch{
+public class Test003_Mobile_ValidateWebViewInteraction extends SetupLaunch {
     String TestName = this.getClass().getSimpleName();
 
     @Test
     public void test003_validateWebViewInteraction() throws IOException {
         ExtentTest Step = SetUpDriver.report(TestName);
-        
+
         Step.info("Step1: Application is Launched");
         SetupLaunch.setupApplication();
 
@@ -35,7 +35,7 @@ public class Test003_ValidateWebViewInteraction extends SetupLaunch{
         home.click_Element("mercedesOption_Btn");
 
         Step.info("Step7: Verify option selected from mercedes from the dropdown");
-        String selectedDropdown= home.getText_Element("SelectDropdown");
+        String selectedDropdown = home.getText_Element("SelectDropdown");
 
         Step.info("Step8: Click on Button 'Send me your name!'");
         home.click_Element("sendName_Btn");
@@ -54,6 +54,5 @@ public class Test003_ValidateWebViewInteraction extends SetupLaunch{
 
         Step.info("Step13: Verify Car Volvo is selected back again");
         softAssert.assertEquals(home.getText_Element("SelectDropdown"), "Volvo");
-
     }
 }

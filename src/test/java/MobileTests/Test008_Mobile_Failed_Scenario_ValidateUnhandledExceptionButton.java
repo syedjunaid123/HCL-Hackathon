@@ -8,22 +8,21 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-
-public class Test007_ValidatingPopUpTapAndDismiss extends SetupLaunch{
+public class Test008_Mobile_Failed_Scenario_ValidateUnhandledExceptionButton extends SetupLaunch {
     String TestName = this.getClass().getSimpleName();
 
     @Test
-    public void test007_validatingPopUpTapAndDismiss() throws IOException {
+    public void test008_failedScenarioValidateUnhandledExceptionButton() throws IOException {
         ExtentTest Step = SetUpDriver.report(TestName);
 
         Step.info("Step1: Application is Launched");
         SetupLaunch.setupApplication();
 
-        Step.info("Step2: Click on Display Pop Up Button");
+        Step.info("Step2: Click on Exception Button");
         HomeScreen home = new HomeScreen();
-        home.click_Element("DispPopupWindow_Btn");
+        home.click_Element("ExceptionTest_Btn");
 
-        Step.info("Step3: Click Dismiss Button");
-        home.verify_Element("PopUpDismiss_Btn");
+        Step.info("Step3: Application is Launched");
+        home.verify_Element("TitleHomeScreen");
     }
 }
