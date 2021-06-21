@@ -24,6 +24,6 @@ public class Test007_Mobile_ValidatingPopUpTapAndDismiss extends SetupLaunch{
         base.click_Element("DispPopupWindow_Btn");
 
         Step.info("Step3: Click Dismiss Button");
-        base.verify_Element("PopUpDismiss_Btn");
+        base.click_ElementId("PopUpDismiss_Btn");
     }
 }

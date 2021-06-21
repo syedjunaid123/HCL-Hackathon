@@ -2,6 +2,8 @@ package MobileAutomation.Configuration.AppiumServer;
 
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
+import org.testng.annotations.AfterClass;
+
 import java.io.File;
 import java.util.logging.Logger;
 
@@ -34,6 +36,7 @@ public class appiumServerInit {
         }
     }
 
+    @AfterClass
     public static void Stop(){
         LOGGER.info("**************  Terminating Appium Server  **************");
         getInstance().stop();

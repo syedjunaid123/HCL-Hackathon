@@ -5,6 +5,7 @@ import MobileAutomation.Configuration.AppiumDriver.appiumDriver;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
+import org.testng.annotations.AfterTest;
 import org.testng.asserts.SoftAssert;
 
 import java.net.MalformedURLException;
@@ -34,6 +35,7 @@ public class setupDriverInit {
         }
     }
 
+    @AfterTest
     public static void tearDownDriver() {
         try {
             Thread.sleep(2000);
